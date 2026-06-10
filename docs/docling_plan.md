@@ -25,3 +25,10 @@ Relevant Rule Context
    |
    v
 IBM Granite Explanation
+```
+
+## MVP Status
+
+The current MVP uses a small local rule dictionary in `src/rule_retriever.py`.
+
+Future versions will replace or expand this dictionary with Docling-processed football rule documents.
