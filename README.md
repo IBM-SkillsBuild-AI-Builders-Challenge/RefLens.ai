@@ -43,3 +43,28 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run app.py
+## IBM AI Integration
+
+RefLens AI is designed around IBM AI technologies.
+
+### IBM Granite
+
+IBM Granite is the planned generative AI model for producing clear, responsible explanations of referee and VAR decisions.
+
+In the current MVP, local Python logic generates explanations so the project can run without API credentials. The file `src/granite_client.py` shows where Granite integration will be connected.
+
+### Langflow
+
+Langflow is used to design the decision-explanation workflow:
+
+```text
+User input → Rule retrieval → Prompt construction → IBM Granite explanation → Streamlit output
+```
+
+The planned workflow is documented in `langflow/reflens_flow.md`.
+
+### Docling
+
+Docling will be used to process football rule documents into structured text. This allows RefLens AI to retrieve relevant rule context before generating an explanation.
+
+The Docling integration plan is documented in `docs/docling_plan.md`.
