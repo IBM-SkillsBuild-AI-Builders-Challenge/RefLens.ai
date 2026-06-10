@@ -4,6 +4,30 @@ from src.explanation_generator import generate_explanation
 
 st.set_page_config(page_title="RefLens AI", page_icon="⚽")
 
+st.sidebar.title("RefLens AI")
+st.sidebar.write("IBM SkillsBuild AI Builders Challenge")
+
+st.sidebar.markdown("---")
+
+st.sidebar.markdown(
+    """
+    **Purpose:**  
+    Help fans understand referee and VAR decisions.
+
+    **Built with:**  
+    - Streamlit  
+    - IBM Granite plan  
+    - Langflow workflow plan  
+    - Docling rule-processing plan
+    """
+)
+
+st.sidebar.markdown("---")
+
+st.sidebar.caption(
+    "Educational prototype only. Does not replace official referee or VAR decisions."
+)
+
 st.title("RefLens AI")
 st.subheader("Explainable AI for Football Referee and VAR Decisions")
 
