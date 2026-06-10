@@ -1,1 +1,17 @@
-
+[
+  {
+    "decision_type": "Handball",
+    "match_moment": "A defender blocked a shot inside the penalty area with an arm extended away from the body.",
+    "expected_output": "Penalty likely supported"
+  },
+  {
+    "decision_type": "Offside",
+    "match_moment": "The attacker was ahead of the second-last defender when the pass was played.",
+    "expected_output": "Offside likely supported"
+  },
+  {
+    "decision_type": "Red Card",
+    "match_moment": "A player made a studs-up tackle with high force near the opponent's ankle.",
+    "expected_output": "Red card likely supported"
+  }
+]
