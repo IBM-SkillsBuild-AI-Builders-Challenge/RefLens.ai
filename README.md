@@ -42,7 +42,8 @@ cd reflens-ai
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run app.py]
+```
 ## IBM AI Integration
 
 RefLens AI is designed around IBM AI technologies.
