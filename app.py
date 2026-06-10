@@ -12,6 +12,23 @@ st.write(
     "the rule, the reasoning, the uncertainty, and why fans may disagree."
 )
 
+with st.expander("IBM AI Technology Used"):
+    st.markdown(
+        """
+        **RefLens AI is designed for the IBM SkillsBuild AI Builders Challenge.**
+
+        This prototype uses an IBM-focused AI architecture:
+
+        - **IBM Granite**: Generates clear referee and VAR decision explanations.
+        - **Langflow**: Organizes the workflow from user input to rule retrieval to AI explanation.
+        - **Docling**: Processes football rule documents into structured text for retrieval.
+        - **IBM SkillsBuild**: Supports learning, development, and responsible AI practices.
+
+        Current MVP note: The app currently uses local rule-based logic as a working prototype.
+        The Granite/Langflow/Docling layer is documented and prepared for integration.
+        """
+    )
+
 decision_type = st.selectbox(
     "Decision type",
     ["Offside", "Handball", "Penalty", "Red Card", "Foul Before Goal"]
