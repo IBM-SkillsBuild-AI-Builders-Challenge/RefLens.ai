@@ -105,7 +105,7 @@ The Docling integration plan is documented in `docs/docling_plan.md`.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/reflens-ai.git
+git clone https://github.com/IBM-SkillsBuild-AI-Builders-Challenge/RefLens.ai.git
 cd reflens-ai
 ```
 
