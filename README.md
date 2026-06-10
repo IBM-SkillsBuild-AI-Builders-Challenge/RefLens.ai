@@ -33,3 +33,13 @@ RefLens AI uses AI to explain referee and VAR decisions using rule-based context
 ## Demo
 
 The MVP is built with Streamlit.
+
+## How to Run Locally
+
+```bash
+git clone https://github.com/YOUR-USERNAME/reflens-ai.git
+cd reflens-ai
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
