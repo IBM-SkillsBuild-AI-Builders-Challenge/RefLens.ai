@@ -8,40 +8,41 @@ def analyze_decision(decision_type, match_moment):
                 "reason": "The arm appears to make the body unnaturally bigger.",
                 "confidence": "Medium"
             }
-        return {
-            "likely_decision": "Decision uncertain",
-            "reason": "The description does not provide enough detail about arm position or reaction time.",
-            "confidence": "Low"
-        }
 
     if decision_type == "Offside":
-        if "ahead" in text or "second-last defender" in text:
+        if "ahead" in text or "second-last defender" in text or "scored" in text:
             return {
                 "likely_decision": "Offside likely supported",
-                "reason": "The attacker appears to be ahead of the second-last defender when the ball was played.",
+                "reason": "The attacker appears to be in an offside position and involved in active play.",
                 "confidence": "Medium"
             }
-        return {
-            "likely_decision": "Decision uncertain",
-            "reason": "Offside requires the attacker position at the exact moment the pass is played.",
-            "confidence": "Low"
-        }
 
     if decision_type == "Red Card":
-        if "serious foul" in text or "violent" in text or "studs" in text:
+        if "studs" in text or "high force" in text or "violent" in text:
             return {
                 "likely_decision": "Red card likely supported",
-                "reason": "The action may involve serious foul play or violent conduct.",
+                "reason": "The challenge may endanger the safety of the opponent.",
                 "confidence": "Medium"
             }
-        return {
-            "likely_decision": "Decision uncertain",
-            "reason": "More detail is needed about force, contact point, and player safety risk.",
-            "confidence": "Low"
-        }
+
+    if decision_type == "Penalty":
+        if "inside the penalty area" in text or "inside box" in text or "inside the box" in text:
+            return {
+                "likely_decision": "Penalty likely supported",
+                "reason": "The foul appears to happen inside the defending team's penalty area.",
+                "confidence": "Medium"
+            }
+
+    if decision_type == "Foul Before Goal":
+        if "pushed" in text or "push" in text or "foul" in text:
+            return {
+                "likely_decision": "Goal review likely supported",
+                "reason": "An attacking foul may have occurred before the goal was scored.",
+                "confidence": "Medium"
+            }
 
     return {
-        "likely_decision": "Decision needs review",
-        "reason": "The available context is limited.",
+        "likely_decision": "Decision uncertain",
+        "reason": "The available description does not provide enough detail for a strong conclusion.",
         "confidence": "Low"
     }
